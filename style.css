@@ -1,0 +1,29 @@
+@charset "UTF-8";
+        body {
+            background-color: #1E1E24;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+           }
+             address{
+                 color: #FFF8F0;
+             }
+              a{
+                  color: #FFCF99;
+              }
+       
+                p{
+                    color: rgb(255, 255, 255);
+                }
+       
+                h1{
+                    color: rgb(235, 235, 235);
+                }
+                h2{
+                    color: rgb(255, 255, 255);
+                }
+                ul{
+                   color: rgb(255, 255, 255);
+                }
+                ol{
+                   color: rgb(255, 255, 255);
+                }
