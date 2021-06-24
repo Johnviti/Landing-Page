@@ -8,6 +8,12 @@
                background-color: aqua;
 
            }
+           h1::first-letter.principal{
+            background-color: rgb(10, 7, 56);
+           }
+           h1.principal::first-letter{
+               background-color: brown;
+           }
              address{
                  color: #FFF8F0;
              }
