@@ -4,6 +4,10 @@
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
            }
+           h1#principal::first-letter{
+               background-color: aqua;
+
+           }
              address{
                  color: #FFF8F0;
              }
