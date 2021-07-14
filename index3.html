@@ -13,13 +13,20 @@
     <style>
         h1{
             font-family: 'Tourney', cursive;
-            color: rgb(255, 0, 0);
+            color: rgb(252, 252, 252);
+            
         }
     </style>
 </head>
 <body>
-<h1>PAGINA EM MANUTENÇÃO</h1>
- 
+<main>
+<h1>Fale conoscos(n vamos responder)</h1>
+<a href="#" onclick="ativar_bloco()" >Nossos contatos.</a>
+<section class="dalle"> 
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure itaque 
+  nisi fugiat architecto ut. Temporibus ab atque minus libero. Eveniet 
+  illo omnis suscipit, ex ipsam consequatur dolores laudantium dolore minus.
+</section>
 
   <iframe src="https://player.vimeo.com/video/565307295" width="640" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/565307295"></a> <a href="https://vimeo.com/user143297990"></a>  <a href="https://vimeo.com"></a>.</p>
@@ -28,6 +35,11 @@
       <a href="index.html">Pagina Inicial</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index2.html" rel="next" >Pagina 2</a>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index3.html" rel="next">Pagina 3</a> 
       </p> 
-    
+</main> 
+ <script type="text/javascript">
+    function ativar_bloco(){
+       document.querySelector("body > main > section").classList.toggle("clique")
+    }
+</script>
 </body>
 </html>
