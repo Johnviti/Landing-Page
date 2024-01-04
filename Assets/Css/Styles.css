@@ -73,6 +73,7 @@ body{
     letter-spacing: -1.28px;
     color: var(--cor-branco);
     text-align: center;
+    padding-bottom: 22px;
 }
 
  .container-imagem img{
@@ -82,7 +83,7 @@ body{
  .container-texto-aviso{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     flex-direction: column;
     margin-left: 50px;
  }
@@ -96,6 +97,11 @@ body{
     color: var(--cor-branco);
     text-align: justify;
     width: 300px;
+    padding-bottom: 30px;
+}
+.container-texto-aviso i{
+    color: var(--cor-icon);
+    font-size: 100px;
     padding-bottom: 20px;
 }
 .button-azul{
