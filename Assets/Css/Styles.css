@@ -2,3 +2,52 @@ body{
     background-color: var(--cor-fundo);
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--cor-preto);
+}
+
+.logo{
+    color: #FFF;
+    font-family: Cormorant;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 86%; 
+    letter-spacing: -1.28px;
+    color: var(--cor-branco);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    gap: 30px;
+}
+
+.nav-item a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+
+.nav-item a:hover{
+    color: var(--cor-branco);
+    border-bottom: 0.2em solid var(--cor-branco);
+    display: inline-block;
+}
+
+.nav-menu{
+    font-family: Poppins;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-right: 150px;
+}
