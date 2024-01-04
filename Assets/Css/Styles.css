@@ -71,7 +71,7 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -1.28px;
+    letter-spacing: 1px;
     color: var(--cor-branco);
     text-align: center;
     padding-bottom: 22px;
@@ -131,6 +131,15 @@ body{
     flex-direction: row;
     gap: 20px;
     padding-top: 40px;
+}
+
+.button-a{
+    text-decoration: none;
+    font-family: poppins;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .redes-sociais-link{
