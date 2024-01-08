@@ -1,11 +1,10 @@
-index.html
-Criação de Site para desenvolvimento das habilidades de Introdução a WEB
-1º periodo.
 
-Landing-Page.html
+# Portifólio
 
-Objetivo principal é capturar a atenção do usuário, levando-o a tomar uma ação específica.
+## 🛠 Habilidades
+Javascript, HTML, CSS
 
-Protótipo 
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://johnviti.github.io/Landing-Page/)
 
-https://www.figma.com/file/eR4bqolR8h0i0hkkYw6Vus/Landing-Page?type=design&node-id=0-1&t=5Pz6eiDHVmUJrRwo-0
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/2G35UWwV4FpR9Gj4ocO03r/Portilofio---Me----John-Victor?type=design&node-id=0-1&mode=design&t=F3jvOkM72uuU2oKw-0)
