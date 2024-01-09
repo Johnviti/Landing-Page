@@ -6,7 +6,6 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 25px 20px;
-    background-color: var(--cor-preto);
 }
 .home{
     background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
@@ -101,6 +100,29 @@ body{
     line-height: normal;
     letter-spacing: 27.8px;
     transform: rotate(-90deg);
+}
+.btn-padrao{
+    width: 206px;
+    height: 43px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--cor-branco);
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor-branco);
+    transition: all 0.4s ease 0s;
+    padding: 10px 20px;
+}
+
+.btn-padrao:hover{
+    color: var(--cor-fundo-manutencao);
+    background-color: var(--cor-branco);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* .navbar{
