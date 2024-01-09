@@ -1,6 +1,46 @@
 body{
     /* background-color: var(--cor-fundo); */
-    background: linear-gradient(var(--cor-fundo-manutencao), var(--cor-fundo-manutencao-2));
+    background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
+}
+.nav-bar-portifolio{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--cor-preto);
+}
+.home{
+    background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
+}
+
+.menu{
+    display: flex;
+    gap: 40px;
+    padding-right: 80px;
+}
+
+.menu li a{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    text-decoration: none;
+    gap: 10px;
+}
+.logo a span{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 /* .navbar{
