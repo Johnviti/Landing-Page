@@ -5,7 +5,7 @@ body{
 .nav-bar-portifolio{
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 25px 20px;
     background-color: var(--cor-preto);
 }
 .home{
