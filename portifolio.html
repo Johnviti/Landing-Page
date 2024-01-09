@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="Assets/Css/Reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="home">
@@ -25,14 +27,14 @@
             </ul>
         </div>
         <div class="container-home">
-            <div>
-                <h1>Hello World! Sou John Victor</h1>
-                <p>Desenvolvedor Web</p>
+            <div class="home-principal">
+                <h1 class="titulo">Hello World! Sou John Victor</h1>
+                <p class="subtitulo">Desenvolvedor Web</p>
                 <div class="container-imagem">
                     <img src="Assets/Img/Home.png" alt="">
                 </div>
             </div>
-            <div>
+            <div class="side">
                 <p>John Victor</p>
             </div>
         </div>
