@@ -1,3 +1,6 @@
+body{
+    background-color: var(--cor-fundo-manutencao);
+}
 .container-texto-aviso a {
     color: #FFF;
     text-decoration: none;
@@ -9,7 +12,13 @@
     text-decoration: none;
     transition: all 0.34s ease 0s;
 }
-
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
 .container-principal{
     display: flex;
     justify-content: center;
@@ -110,4 +119,47 @@
     color: var(--cor-branco);
     font-size: 35px;
     transition: all 0.4s ease 0s;
+}
+
+
+@media screen and (max-width: 768px){
+    .container-principal{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        gap: 0px;
+    }
+    .container-texto-aviso{
+        margin-left: 0px;
+        padding-top: 50px;
+    }
+    .container-texto-aviso h1{
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .container-texto-aviso p{
+        font-size: 18px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .redes-sociais-link{
+        width: 100%;
+        height: 120px;
+        padding-top: 20px;
+    }
+    .redes-sociais-link a i{
+        font-size: 25px;
+    }
+    .redes-sociais-link a:hover i{
+        font-size: 30px;
+    }
+    .button-azul{
+        width: 100%;
+        height: 43px;
+        font-size: 18px;
+    }
+    .button-a{
+        font-size: 18px;
+    }
 }
