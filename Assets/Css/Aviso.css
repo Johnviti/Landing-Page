@@ -1,3 +1,7 @@
+body{
+    /* background-color: var(--cor-fundo); */
+    background: var(--cor-fundo-manutencao);
+}
 .container-texto-aviso a {
     color: #FFF;
     text-decoration: none;
