@@ -1,5 +1,6 @@
 body{
-    background-color: var(--cor-fundo-manutencao);
+    /* background-color: var(--cor-fundo); */
+    background: var(--cor-fundo-manutencao);
 }
 .container-texto-aviso a {
     color: #FFF;
