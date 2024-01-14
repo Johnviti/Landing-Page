@@ -6,6 +6,8 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 25px 20px;
+    width: 100vw;
+    position: fixed;
 }
 .home{
     background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
