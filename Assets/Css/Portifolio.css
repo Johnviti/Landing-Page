@@ -53,6 +53,7 @@ body{
     width: 70vw;
     margin: 0 auto;
     gap: 150px;
+    padding-top: 60px;
 }
 .container-imagem img{
     margin-top: 60px;
@@ -133,4 +134,47 @@ body{
     align-items: center;
     gap: 20px;
     padding: 20px 0;
+}
+.container-redes-sociais a{
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.4s ease 0s;
+}
+.container-redes-sociais a:hover svg path{
+    fill: var(--cor-branco);
+    text-decoration: none;
+    cursor: pointer;
+}
+.container-profissao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    margin: auto;
+}
+.imagem-profissao img{
+    width: 40vw;
+}
+
+.container-profissao .texto-profissao h1{
+    color: var(--cor-branco);
+    font-family: Playfair Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%; /* 90px */
+    letter-spacing: 0.3px;
+}
+
+.container-profissao .texto-profissao p{
+    color: rgba(255, 255, 255, 0.50);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%; /* 36px */
+    letter-spacing: 0.3px;
 }
