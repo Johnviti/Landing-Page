@@ -153,7 +153,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 50px;
     padding: 50px 0;
     margin: auto;
 }
@@ -164,23 +164,35 @@ body{
 
 .container-profissao .texto-profissao h1{
     color: var(--cor-branco);
-    font-family: Playfair Display;
-    font-size: 50px;
+    font-family: Poly;
+    font-size: 55px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 180%; /* 90px */
+    font-weight: 400;
     letter-spacing: 0.3px;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     word-break: break-all;
-    max-width: 450px;
+    max-width: 500px;
+    margin-bottom: 20px;
 }
-
+.texto-profissao h2{
+    color: var(--cor-branco);
+    font-family: Quantico;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 72px */
+    letter-spacing: 0.3px;
+    word-break: break-all;
+    max-width: 500px;
+}
 .container-profissao .texto-profissao p{
     color: rgba(255, 255, 255, 0.50);
     font-family: Poppins;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 180%; /* 36px */
+    line-height: 180%; 
     letter-spacing: 0.3px;
+    max-width: 450px;
+    margin-top: 20px;
 }
