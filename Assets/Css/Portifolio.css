@@ -35,6 +35,9 @@ body{
     text-decoration: none;
     gap: 10px;
 }
+.logo a{
+    text-decoration: none;
+}
 .logo a span{
     color: #FFF;
     font-family: Poppins;
