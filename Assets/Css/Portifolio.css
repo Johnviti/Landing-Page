@@ -58,6 +58,7 @@ body{
 .container-imagem img{
     margin-top: 60px;
     width: 25vw;
+    filter: opacity(0.1);
 }
 
 .container-home .titulo{
@@ -151,12 +152,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     gap: 20px;
     padding: 50px 0;
     margin: auto;
 }
 .imagem-profissao img{
     width: 40vw;
+    filter: opacity(0.1);
 }
 
 .container-profissao .texto-profissao h1{
@@ -167,6 +170,9 @@ body{
     font-weight: 700;
     line-height: 180%; /* 90px */
     letter-spacing: 0.3px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 450px;
 }
 
 .container-profissao .texto-profissao p{
