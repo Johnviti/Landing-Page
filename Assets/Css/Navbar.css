@@ -1,0 +1,46 @@
+.nav-bar-portifolio{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+    width: 100vw;
+    position: fixed;
+}
+.menu{
+    display: flex;
+    gap: 40px;
+    padding-right: 80px;
+}
+.menu li a{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    text-decoration: none;
+    gap: 10px;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo a span{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.navbar-rolagem{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.527);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease 0s;
+}
