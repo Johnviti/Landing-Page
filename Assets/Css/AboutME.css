@@ -1,0 +1,141 @@
+.about-me{
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    padding: 200px 0;
+    /* margin-top: 200px; */
+}
+
+.about-me .my-photo{
+    width: 25vw;
+    height: 25vw;
+    background-image: url('../Img/JohnVictor.png');
+    background-size: cover;
+    /* width: 30vw; */
+    object-fit: cover;
+    border-radius: 100%;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.about-me .my-photo:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.about-me .my-photo::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+    background-size: cover;
+    filter: blur(25px);
+    opacity: 0;
+    z-index: 1;
+}
+
+.about-me .my-photo:hover::before{
+    opacity: 1;
+}
+    /* background-color: var(--cor-branco); */
+    /* filter: opacity(0.1); */
+
+
+.about-me.my-photo:hover{
+    scale: 1.2;
+    transition: .5s;
+}
+
+.about-me .my-photo::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border: 100%;
+    background-size: cover;
+    filter: blur(25px);
+    opacity: 0;
+    z-index: 1;
+}
+.about-me .my-photo:hover::before{
+    opacity: 1;
+    transition: .2s;
+}
+
+
+/* criação da barra softskills */
+.about-me-titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-me-titulo h1{
+    color: var(--cor-preto);
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.95px;
+}
+.about-me-titulo p{
+    color: var(--cor-preto);
+    font-family: Poppins;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.63px;
+    width: 600px;
+    word-break: break-all;
+}
+
+.info-skill p{
+    color: var(--cor-preto);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+.skill-bar{
+    gap: 10px;  
+}
+
+.skill-bar .bar{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: var(--cor-cinza);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.skill-bar .bar::before{
+    content: ' ';
+    position: absolute;
+    width: var(--wth);
+    height: 100%;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+}
+
+.skill-bar .bar::after {
+    content: ' ';
+    position: absolute;
+    width: 16px; 
+    height: 16px;
+    background-color: #000000; 
+    border-radius: 50%; 
+    left: calc(var(--wth) - 2%);
+    border: 2px solid var(--cor-branco);
+    top: -8px;
+    transform: translate(-50%, -50%);
+}
