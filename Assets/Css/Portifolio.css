@@ -16,12 +16,6 @@ body{
     gap: 150px;
     padding-top: 60px;
 }
-.container-imagem img{
-    margin-top: 60px;
-    width: 25vw;
-    filter: opacity(0.1);
-}
-
 .container-home .titulo{
     color: #FFF;
     font-family: Poiret One;
