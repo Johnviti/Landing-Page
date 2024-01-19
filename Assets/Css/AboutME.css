@@ -12,7 +12,7 @@
 .about-me .my-photo{
     width: 25vw;
     height: 25vw;
-    /* background-image: url('../Img/JohnVictor.png'); */
+    background-image: url('../Img/JohnVictor.png');
     background-size: cover;
     /* width: 30vw; */
     object-fit: cover;
