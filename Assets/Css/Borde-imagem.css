@@ -1,15 +1,9 @@
-/* .conteudo-imagem img{
-    margin-top: 60px;
-    width: 25vw;
-    height: 25vw;
-    border-radius: 100%;
-    filter: opacity(0.1);
-} */
+
 .container-imagem{
+    margin-top: 80px;
     position: relative;
-    width: 25vw;
-    height: 25vw;
-    background: #0e1538;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
     border-radius: 50%;
     display: flex;
@@ -19,16 +13,10 @@
 .container-imagem::before{
     content: ' ';
     position: absolute;
-    width: 100%;
-    height: 100%;
     inset: -10px 140px;
     transition: 0.5s;
     background: linear-gradient(315deg, #08ccff, #d40bd4);
     animation: animate 4s linear infinite;
-    /* background-size: cover; */
-    /* filter: blur(25px); */
-    /* opacity: 0; */
-    /* z-index: 1; */
 }
 
 .container-imagem:hover::before{
@@ -47,18 +35,15 @@
     content: ' ';
     position: absolute;
     inset: 6px;
-    /* transition: 0,5s; */
     background: #0e1538;
     border-radius: 50%;
     z-index: 1;
 }
 
 .conteudo-imagem{
-    width: 100%;
-    height: 100%;
     position: absolute;
     inset: 30px;
-    background: #0e1538;
+    /* background: #0e1538; */
     /* border: 6px solid #000000;  */
     background-size: cover;
     z-index: 3;
@@ -73,15 +58,47 @@
 .conteudo-imagem img{
     margin-top: 60px;
     position: absolute;
-    width: 25vw;
-    height: 25vw;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: 0.5s;
     z-index: 3;
     pointer-events: none;
-    filter: opacity(0.1);
+    background-color: var(--cor-fundo-imagem);
+    /* filter: opacity(0.1); */
 }
 
 .container-imagem:hover .conteudo-imagem img{
     opacity: 0;
+}
+
+.conteudo-imagem h2{
+    position: relative;
+    z-index: 2;
+    font-family: poppins;
+    font-size: 1.4vw;
+    text-align: center;
+    color: var(--cor-branco);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.conteudo-imagem h2 span{
+    font-weight: 300;
+    font-size: 0.8vw;
+}
+
+.conteudo-imagem a{
+    position: relative;
+    margin-top: 10px;
+    font-family: poppins;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--cor-branco);
+    background: linear-gradient(315deg, #08ccff, #d40bd4);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2em;
 }
