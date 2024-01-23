@@ -18,25 +18,7 @@ body{
     gap: 150px;
     padding-top: 60px;
 }
-.container-home .titulo{
-    color: #FFF;
-    font-family: Poiret One;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.3px;
-}
 
-.container-home .subtitulo{
-    color: #A6A6A6;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.3px;
-}
 .home-principal{
     display: flex;
     justify-content: center;

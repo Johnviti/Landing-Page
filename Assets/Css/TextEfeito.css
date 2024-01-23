@@ -1,0 +1,50 @@
+.home-principal h1{
+    color: #FFF;
+    font-family: Poiret One;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
+    border-right: 3px solid;
+}
+
+.container-home .subtitulo{
+    color: #A6A6A6;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slideInFromRight 4s ease-in-out;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blinking{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
