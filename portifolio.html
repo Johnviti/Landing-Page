@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Victor</title>
-    <link type="text/css" rel="stylesheet" href="main.css">
+    <link type="text/css" rel="stylesheet" href="Assets/Css/3d.css">
     <link rel="stylesheet" href="Assets/Css/BorderImage.css">
     <link rel="stylesheet" href="Assets/Css/AboutME.css">
     <link rel="stylesheet" href="Assets/Css/TextEfeito.css">
@@ -22,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <!-- Inclua a biblioteca three.js via CDN -->
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@110.0.1/build/three.module.js"></script> -->
+    <!-- Inclua o GLTFLoader via CDN -->
 </head>
 <body>
     <div class="home">
@@ -142,11 +145,13 @@
     <div class="my-project">
         <div class="header-project">
             <h1>Meu projetos</h1>
-            <a href="/examples/css3d_molecules.html">Clique</a>
-            <div id="container"></div>
         </div>
+        <div id="canvas"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@110.0.1/examples/js/loaders/GLTFLoader.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/loaders/GLTFLoader.js"></script>
     <script src="Assets/Js/navbar.js"></script>
-
+    <script src="Assets/Js/main.js"></script>
 </body>
 </html>
