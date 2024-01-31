@@ -8,17 +8,24 @@
         body {
             margin: 0;
         }
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            display: absolute;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body>
     <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@0.160.1/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/"
-          }
+      {
+        "imports": {
+          "three": "https://johnviti.github.io/3D-Animation/build/three.module.js",
+          "three/addons/": "https://johnviti.github.io/3D-Animation/examples/jsm/"
         }
-      </script>
+      }
+    </script>
     <script type="module" src="/3dTest.js"></script>
 </body>
 </html>

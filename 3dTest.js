@@ -1,70 +1,55 @@
+
+let scene, camera, renderer, starGeo, stars;
+
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+function init(){
+	scene = new THREE.Scene();
+	camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 1, 1000);
+	camera.position.z = 1;
+	camera.rotation.x = Math.PI/2;
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+	renderer = new THREE.WebGLRenderer();
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	document.body.appendChild(renderer.domElement);
 
-const controls = new OrbitControls( camera, renderer.domElement );
-controls.target.set( 0, 5, 0 );
-controls.update();
+	starGeo = new THREE.Geometry();
+	for(let i=0;i<6000;i++){
+		let star = new THREE.Vector3(
+			Math.random()*600 - 300,
+			Math.random()*600 - 300,
+			Math.random()*600 - 300
+		);
+		star.velocity = 0;
+		star.acceleration = 0.02;
+		starGeo.vertices.push(star);
+	}
+	let sprite = new THREE.TextureLoader().load( 'star.png' );
+	let starMaterial = new THREE.PointsMaterial({
+		color: 0xaaaaaa,
+		size: 0.7,
+		map: sprite
+	});
 
-function frameArea( sizeToFitOnScreen, boxSize, boxCenter, camera ) {
-
-	const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
-	const halfFovY = THREE.MathUtils.degToRad( camera.fov * .5 );
-	const distance = halfSizeToFitOnScreen / Math.tan( halfFovY );
-
-	const direction = ( new THREE.Vector3() )
-		.subVectors( camera.position, boxCenter )
-		.multiply( new THREE.Vector3( 1, 0, 1 ) )
-		.normalize();
-
-	camera.position.copy( direction.multiplyScalar( distance ).add( boxCenter ) );
-
-	camera.near = boxSize / 100;
-	camera.far = boxSize * 100;
-
-	camera.updateProjectionMatrix();
-
-	camera.lookAt( boxCenter.x, boxCenter.y, boxCenter.z );
-
+	stars = new THREE.Points(starGeo,starMaterial);
+	scene.add(stars);
+	animate();
 }
 
-const loader = new GLTFLoader();
-gltfLoader.load( 'scene.glb', ( gltf ) => {
-
-	const root = gltf.scene;
-	scene.add( root );
-
-	// compute the box that contains all the stuff
-	// from root and below
-	const box = new THREE.Box3().setFromObject( root );
-
-	const boxSize = box.getSize( new THREE.Vector3() ).length();
-	const boxCenter = box.getCenter( new THREE.Vector3() );
-
-	// set the camera to frame the box
-	frameArea( boxSize * 0.5, boxSize, boxCenter, camera );
-
-	// update the Trackball controls to handle the new size
-	controls.maxDistance = boxSize * 10;
-	controls.target.copy( boxCenter );
-	controls.update();
-
-} );
-
-camera.position.z = 5;
-
-function animate() {
-	requestAnimationFrame( animate );
-    cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-	renderer.render( scene, camera );
+function animate(){
+	starGeo.vertices.forEach(p => {
+		p.velocity += p.acceleration
+		p.y -= p.velocity;
+		
+		if (p.y < -200) {
+			p.y = 200;
+			p.velocity = 0;
+		}
+	});
+	starGeo.verticesNeedUpdate = true;
+	stars.rotation.y +=0.002;
+	renderer.render(scene, camera);
+	requestAnimationFrame(animate);
 }
 
-animate();
+init();
