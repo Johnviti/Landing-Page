@@ -14,7 +14,7 @@
 
       starGeo = new THREE.Geometry();
       for(let i=0;i<6000;i++) {
-        star = new THREE.Vector3(
+        let star = new THREE.Vector3(
           Math.random() * 600 - 300,
           Math.random() * 600 - 300,
           Math.random() * 600 - 300
@@ -24,7 +24,7 @@
         starGeo.vertices.push(star);
       }
 
-      let sprite = new THREE.TextureLoader().load( 'star.png' );
+      let sprite = new THREE.TextureLoader().load( 'stars.png' );
       let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
         size: 0.7,
