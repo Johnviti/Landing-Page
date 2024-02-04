@@ -1,0 +1,27 @@
+.my-project{
+    /* background-color: var(--cor-branco); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 50px; */
+    /* padding: 200px 0; */
+    background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
+}
+
+.header-project h1{
+    color: var(--cor-branco);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header-project p{
+    color: var(--cor-branco);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
