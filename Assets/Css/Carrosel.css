@@ -113,7 +113,9 @@ img {
 .swiper-button-next {
   right: 0;
 }
-
+.swiper{
+  padding: 30px !important ;
+}
 .swiper-pagination-bullet {
   background-color: var(--cor-laranja) !important;
   opacity: 1;
