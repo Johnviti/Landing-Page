@@ -1,0 +1,17 @@
+
+.rodape{
+    background-color: transparent;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.social-rodape{
+
+}
+
+.btn-social-rodape{
+    background-color: var(--cor-branco);
+    color: var(--cor-fundo-manutencao);
+    border-radius: 50%;
+    width: 20px;
+}
