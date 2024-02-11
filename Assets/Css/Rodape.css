@@ -1,22 +1,31 @@
 
-.rodape{
+.container-rodape{
     background-color: transparent;
     color: #fff;
-    padding: 20px 0;
+    padding: 40px 165px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
-.social-rodape{
-
+.social-rodape ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .btn-social-rodape{
-    background-color: var(--cor-branco);
-    color: var(--cor-fundo-manutencao);
+    display: flex;
+    background-color: var(--cor-fundo-btn-rodape);
     border-radius: 50%;
-    width: 20px;
+    padding: 10px;
 }
 
 .btn-social-rodape img{
     width: 20px;
     height: 20px;
+}
+
+.btn-social-rodape img path{
+    color: var(--cor-branco);
 }
