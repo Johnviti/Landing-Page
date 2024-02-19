@@ -10,13 +10,13 @@ body{
 .container-home{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     height: 100%;
     width: 70vw;
     margin: 0 auto;
     gap: 150px;
-    padding-top: 60px;
+    padding-top: 200px;
 }
 
 .home-principal{
@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    z-index: 2;
 }
 
 .side{
@@ -207,4 +208,13 @@ body{
     left: 0;
     z-index: 9999;
     transition: all 0.4s ease 0s;
+}
+
+#container3D canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }

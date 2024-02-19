@@ -9,6 +9,8 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+.digitando{
     animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
     border-right: 3px solid;
 }
@@ -23,6 +25,10 @@
     letter-spacing: 0.3px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+
+.efeito-direita{
     animation: slideInFromRight 4s ease-in-out;
 }
 

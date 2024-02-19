@@ -4,6 +4,7 @@
     padding: 25px 20px;
     width: 100vw;
     position: fixed;
+    z-index: 5;
 }
 .logo{
     display: flex;

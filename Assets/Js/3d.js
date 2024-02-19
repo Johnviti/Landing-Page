@@ -8,7 +8,9 @@ const scene = new THREE.Scene();
 //câmera com posições e ângulos
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-var Spinner = document.getElementById("carregamento");
+const Spinner = document.getElementById("carregamento");
+const titulo = document.querySelector(".titulo");
+const subttitulo = document.querySelector(".subtitulo");
 
 // Mantenha o controle da posição do mouse
 let mouseX = window.innerWidth / 2;
@@ -33,13 +35,16 @@ loader.load(
         object = gltf.scene;
         scene.add(object);
         Spinner.style.display = "none";
+        titulo.classList.add("digitando");
+        subttitulo.classList.add("efeito-direita");
     },
     function (xhr) {
-        
         console.log((xhr.loaded / xhr.total * 100) + '% carregado');
     },
     function (error) {
         Spinner.style.display = "none";
+        titulo.classList.add("digitando");
+        subttitulo.classList.add("efeito-direita");
         console.error(error);
     }
 );
@@ -79,7 +84,7 @@ if (objToRender === "world") {
 function animate() {
     requestAnimationFrame(animate);
     // Aqui poderíamos adicionar algum código para atualizar a cena, adicionando algum movimento automático
-    object.rotation.y += 0.01;
+    // object.rotation.y += 0.01;
     // Faça o olho se mover
     if (object && objToRender === "eye") {
         // Eu ajustei as constantes aqui até que parecesse bom
@@ -89,18 +94,15 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-// Adicione um ouvinte à janela, para que possamos redimensionar a janela e a câmera
 window.addEventListener("resize", function () {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// Adicione um ouvinte de posição do mouse, para que possamos fazer o olho se mover
 document.onmousemove = (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 }
 
-// Inicie a renderização 3D
 animate();
