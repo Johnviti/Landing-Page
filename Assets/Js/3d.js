@@ -21,13 +21,13 @@ let object;
 let controls;
 
 
-let objToRender = 'carro';
+let objToRender = 'world';
 
 const loader = new GLTFLoader();
 
 // Carregue o arquivo
 loader.load(
-    `3D/${objToRender}/scene.gltf`,
+    `Assets/3D/${objToRender}/scene.gltf`,
     function (gltf) {
         // Adicione o modelo 3D à cena
         object = gltf.scene;
@@ -52,7 +52,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("container3D").appendChild(renderer.domElement);
 
 // Defina a distância da câmera para o modelo 3D
-camera.position.z = objToRender === "dino" ? 25 : 500;
+camera.position.z = objToRender === "world" ? 15 : 500;
 
 // Adicione luzes à cena para que possamos realmente ver o modelo 3D
 const topLight = new THREE.DirectionalLight(0xffffff, 1); // (cor, intensidade)
@@ -60,19 +60,26 @@ topLight.position.set(500, 500, 500) // canto superior esquerdo
 topLight.castShadow = true;
 scene.add(topLight);
 
-const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 5 : 1);
+const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "world" ? 5 : 1);
 scene.add(ambientLight);
 
-// Isso adiciona controles à câmera, para que possamos girá-la / ampliá-la com o mouse
-if (objToRender === "dino") {
+
+// Isso adiciona controles à câmera, para que possamos girá-la
+if (objToRender === "world") {
     controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false; // Disable zooming
+
 }
+// Isso adiciona controles à câmera, para que possamos girá-la / ampliá-la com o mouse
+// if (objToRender === "world") {
+//     controls = new OrbitControls(camera, renderer.domElement);
+// }
 
 // Renderize a cena
 function animate() {
     requestAnimationFrame(animate);
     // Aqui poderíamos adicionar algum código para atualizar a cena, adicionando algum movimento automático
-
+    object.rotation.y += 0.01;
     // Faça o olho se mover
     if (object && objToRender === "eye") {
         // Eu ajustei as constantes aqui até que parecesse bom
