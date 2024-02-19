@@ -8,6 +8,8 @@ const scene = new THREE.Scene();
 //câmera com posições e ângulos
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+var Spinner = document.getElementById("carregamento");
+
 // Mantenha o controle da posição do mouse
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
@@ -19,23 +21,25 @@ let object;
 let controls;
 
 
-let objToRender = 'dino';
+let objToRender = 'carro';
 
 const loader = new GLTFLoader();
 
 // Carregue o arquivo
 loader.load(
-    `models/${objToRender}/scene.gltf`,
+    `3D/${objToRender}/scene.gltf`,
     function (gltf) {
         // Adicione o modelo 3D à cena
         object = gltf.scene;
         scene.add(object);
+        Spinner.style.display = "none";
     },
     function (xhr) {
-       
+        
         console.log((xhr.loaded / xhr.total * 100) + '% carregado');
     },
     function (error) {
+        Spinner.style.display = "none";
         console.error(error);
     }
 );

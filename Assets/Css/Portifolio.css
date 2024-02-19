@@ -192,3 +192,19 @@ body{
     max-width: 500px;
     margin-bottom: 20px;
 }
+
+
+.background-spinner{
+    background-color: #010520;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.4s ease 0s;
+}
