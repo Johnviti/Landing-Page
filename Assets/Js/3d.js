@@ -84,7 +84,7 @@ if (objToRender === "world") {
 function animate() {
     requestAnimationFrame(animate);
     // Aqui poderíamos adicionar algum código para atualizar a cena, adicionando algum movimento automático
-    object.rotation.y += 0.01;
+    // object.rotation.y += 0.01;
     // Faça o olho se mover
     if (object && objToRender === "eye") {
         // Eu ajustei as constantes aqui até que parecesse bom
