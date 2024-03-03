@@ -1,9 +1,34 @@
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
 }
+
+/* BEGIN: estilize o scroll */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #010520;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--cor-branco);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* END: estilize o scroll */
+
+
 .home{
     background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
 }
@@ -14,20 +39,32 @@ body{
     min-height: 100vh;
     height: 100%;
     width: 70vw;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     gap: 150px;
-    padding-top: 200px;
+    padding-top: 268px;
 }
 
 .home-principal{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     z-index: 2;
 }
-
+.texto-principal{
+    color: #b1b1b1;
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: normal;
+    text-align: justify;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    width: 600px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+}
 .side{
     position: absolute;
     top: 50%;
@@ -198,8 +235,10 @@ body{
 .background-spinner{
     background-color: #010520;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -209,7 +248,40 @@ body{
     z-index: 9999;
     transition: all 0.4s ease 0s;
 }
+.background-spinner h1{
+    color: var(--cor-branco);
+    font-family: Quantico;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
 
+}
+.btn-carregamento{
+    height: 50px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--cor-branco);
+    background-color: transparent !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor-branco);
+    padding: 10px 20px;
+}
+.btn-carregamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.carregamento{
+    background-color: var(--cor-branco);
+}
 #container3D canvas {
     width: 100vw !important;
     height: 100vh !important;
