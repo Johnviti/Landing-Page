@@ -26,7 +26,7 @@ const loader = new GLTFLoader();
 
 // Carregue o arquivo
 loader.load(
-    `Assets/3D/${objToRender}/scene.gltf`,
+    `scene.gltf`,
     function (gltf) {
         object = gltf.scene;
         scene.add(object);
