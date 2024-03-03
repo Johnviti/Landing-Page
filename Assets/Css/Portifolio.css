@@ -34,11 +34,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .container-home{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     min-height: 100vh;
     height: 100%;
     width: 70vw;
+    padding-left: 200px;
     /* margin: 0 auto; */
     gap: 150px;
     padding-top: 268px;
@@ -68,7 +69,7 @@ body::-webkit-scrollbar-thumb:hover {
 .side{
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -5%;
     transform: translateY(-50%);
 }
 
@@ -289,4 +290,100 @@ body::-webkit-scrollbar-thumb:hover {
     top: 0;
     left: 0;
     z-index: 1;
+}
+.btn-contato{
+    width: 206px;
+    height: 50px;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid var(--cor-branco);
+    background-color: transparent;
+    text-align: center;
+    font-family: Quantico;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor-branco);
+    transition: all 0.4s ease 0s;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-3d{
+    color: var(--cor-branco);
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    position: absolute;
+    bottom: 12%;
+    right: 26%;
+    
+    padding: 10px 2% 10px 20px;
+    z-index: 9999;
+}
+.info-3d h1{
+    font-family: Quantico;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.info-3d p{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-widht: 1360px){
+    .container-home{
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 165px;
+    }
+    /* .home-principal{
+        align-items: center;
+        text-align: center;
+    }
+    .texto-principal{
+        width: 100%;
+    }
+    .side{
+        display: none;
+    }
+    .container-redes-sociais{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .container-profissao{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .container-profissao .texto-profissao h1{
+        font-size: 40px;
+    }
+    .texto-profissao h2{
+        font-size: 30px;
+    }
+    .container-contato{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .container-contato p{
+        text-align: center;
+    }
+    .container-contato h1{
+        text-align: center;
+    }
+    .background-spinner h1{
+        font-size: 40px;
+    }
+    .btn-carregamento{
+        font-size: 20px;
+    } */
 }

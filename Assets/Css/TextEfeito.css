@@ -1,14 +1,27 @@
-.home-principal h1{
+.home-principal h1 {
     color: #FFF;
-    font-family: Poiret One;
-    font-size: 50px;
+    font-family: Quantico;
+    font-size: 58px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
-    letter-spacing: 0.3px;
+    letter-spacing: -1px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+.subtitulo-web{
+    color: var(--second-color);
+    font-family: Quantico;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -28px;
 }
 .digitando{
     animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;

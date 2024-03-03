@@ -5,7 +5,7 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(8, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const Spinner = document.getElementById("carregamento");
 const titulo = document.querySelector(".titulo");
@@ -74,7 +74,7 @@ function animate() {
     // object.position.x = 0;
     // object.position.y = -0.8;
     object.rotation.y += 0.001;
-    object.position.x = 1;
+    object.position.x = 0.8;
     object.position.y = -0.6;
     renderer.render(scene, camera);
 }
