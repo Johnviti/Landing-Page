@@ -347,50 +347,76 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* RESPONSIVIDADE */
-@media (max-widht: 1360px){
+@media (max-width: 1360px) {
     .container-home{
         flex-direction: column;
         gap: 50px;
-        padding-top: 165px;
+        padding-top: 160px;
     }
-    /* .home-principal{
-        align-items: center;
-        text-align: center;
+    .btn-contato{
+        width: 180px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .background-spinner h1{
+        font-size: 40px;
+    }  
+    .btn-carregamento{
+        height: 50px;
+        font-size: 25px;
+    }
+    .side{
+        font-size: 18px;
+        right: -8%;
+    }
+}
+
+@media (max-width: 760px) {
+    .container-home{
+        padding-left: 40px;
+        gap: 100px;
     }
     .texto-principal{
-        width: 100%;
+        width: 500px;
+    }
+    .home-principal h1, .subtitulo-web {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+    #container3D canvas {
+        top: 15% !important;
+        right: 50% !important;
+        left: auto;
+        z-index: 1;
     }
     .side{
         display: none;
     }
-    .container-redes-sociais{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .container-profissao{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .container-profissao .texto-profissao h1{
-        font-size: 40px;
-    }
-    .texto-profissao h2{
-        font-size: 30px;
-    }
-    .container-contato{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .container-contato p{
-        text-align: center;
-    }
-    .container-contato h1{
-        text-align: center;
+    .btn-contato{
+        width: 160px;
+        height: 40px;
+        font-size: 18px;
     }
     .background-spinner h1{
-        font-size: 40px;
-    }
+        font-size: 24px;
+        text-align: center;
+    }  
     .btn-carregamento{
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .info-3d {
+        border-radius: 1.5px;
+        bottom: 4%;
+        right: 8%;
+        padding: 5px 2% 5px 10px;
+        z-index: 2;
+    }
+    .info-3d h1{
         font-size: 20px;
-    } */
+    }
+    .info-3d p{
+        font-size: 14px;
+    }
 }

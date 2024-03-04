@@ -1,7 +1,5 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
-
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
 const scene = new THREE.Scene();
@@ -15,11 +13,8 @@ const subttitulo = document.querySelector(".subtitulo");
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 
-
 let object;
 let controls;
-
-
 let objToRender = 'World';
 
 const loader = new GLTFLoader();
@@ -45,15 +40,14 @@ loader.load(
     }
 );
 
-const renderer = new THREE.WebGLRenderer({ alpha: true }); // Alpha: true permite o fundo transparente
+const renderer = new THREE.WebGLRenderer({ alpha: true }); 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-// Adicione o renderizador ao DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
 
 camera.position.z = objToRender === "World" ? 12 : 500;
 
-const topLight = new THREE.DirectionalLight(0xffffff, 1); // (cor, intensidade)
+const topLight = new THREE.DirectionalLight(0xffffff, 1); 
 topLight.position.set(500, 500, 500) 
 topLight.castShadow = true;
 scene.add(topLight);
@@ -62,17 +56,14 @@ const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "World" ? 
 scene.add(ambientLight);
 
 
-if (objToRender === "World") {
-    controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = false; 
-}
+// if (objToRender === "World") {
+//     controls = new OrbitControls(camera, renderer.domElement);
+//     controls.enableZoom = false; 
+// }
 
 // Renderize a cena
 function animate() {
     requestAnimationFrame(animate);
-    // object.rotation.y += 0.001;
-    // object.position.x = 0;
-    // object.position.y = -0.8;
     object.rotation.y += 0.001;
     object.position.x = 0.8;
     object.position.y = -0.6;

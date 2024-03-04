@@ -67,3 +67,18 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 1360px) {
+    .container-home{
+        padding-top: 160px !important;
+    }
+    .home-principal h1 {
+        font-size: 40px;
+    }
+    .subtitulo-web{
+        font-size: 40px;
+    }
+    .container-home .subtitulo{
+        font-size: 30px;
+    }
+}
