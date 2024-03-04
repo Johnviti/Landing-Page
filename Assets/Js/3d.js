@@ -3,7 +3,13 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(8, window.innerWidth / window.innerHeight, 0.1, 1000);
+let camera;
+
+if (window.innerWidth < 760) {
+    camera = new THREE.PerspectiveCamera(12, window.innerWidth / window.innerHeight, 0.1, 1000);
+} else {
+    camera = new THREE.PerspectiveCamera(8, window.innerWidth / window.innerHeight, 0.1, 1000);
+}
 
 const Spinner = document.getElementById("carregamento");
 const titulo = document.querySelector(".titulo");
@@ -56,17 +62,22 @@ const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "World" ? 
 scene.add(ambientLight);
 
 
-// if (objToRender === "World") {
-//     controls = new OrbitControls(camera, renderer.domElement);
-//     controls.enableZoom = false; 
-// }
+if (objToRender === "World") {
+    if (window.innerWidth < 760) {
+        controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false; 
+    }
+}
 
 // Renderize a cena
 function animate() {
     requestAnimationFrame(animate);
     object.rotation.y += 0.001;
-    object.position.x = 0.8;
-    object.position.y = -0.6;
+    object.position.y = -1;
+    if (window.innerWidth > 760) {
+        object.position.x = 0.8;
+        object.position.y = -0.6;
+    }
     renderer.render(scene, camera);
 }
 

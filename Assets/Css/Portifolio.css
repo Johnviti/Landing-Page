@@ -384,8 +384,8 @@ body::-webkit-scrollbar-thumb:hover {
         margin-bottom: 0;
     }
     #container3D canvas {
-        top: 15% !important;
-        right: 50% !important;
+        top: 0;
+        right: 0;
         left: auto;
         z-index: 1;
     }
