@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb:hover {
     transform: rotate(-90deg);
 }
 .btn-padrao{
-    width: 206px;
+    width: 210px;
     height: 43px;
     text-align: center;
     border-radius: 8px;
@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: transparent;
     text-align: center;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 501 !important;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor-branco);
@@ -101,9 +101,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-padrao:hover{
-    color: var(--cor-fundo-manutencao);
+    color: #010520;
     background-color: var(--cor-branco);
     text-decoration: none;
+    font-weight: 501;
     cursor: pointer;
 }
 .container-redes-sociais{
@@ -303,7 +304,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--cor-branco);
     transition: all 0.4s ease 0s;
     padding: 10px 20px;
@@ -311,6 +312,13 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: center;
     align-items: center;
 }
+.btn-contato:hover{
+    color: #2B2998;
+    background-color: var(--cor-branco);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .info-3d{
     color: var(--cor-branco);
     background: rgba(255, 255, 255, 0.21);
@@ -322,9 +330,8 @@ body::-webkit-scrollbar-thumb:hover {
     position: absolute;
     bottom: 12%;
     right: 26%;
-    
     padding: 10px 2% 10px 20px;
-    z-index: 9999;
+    z-index: 2;
 }
 .info-3d h1{
     font-family: Quantico;
