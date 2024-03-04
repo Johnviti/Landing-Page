@@ -164,18 +164,19 @@
                 <h1>Meu projetos</h1>
                 <p>Confira alguns dos meus projetos recentes<br>Demonstrando minha experiência em desenvolvimento frontend, backend e integrações.</p>
                 <div class="btn-project">
-                    <a href="" class="active">TODOS</a>
-                    <a href="">LARAVEL</a>
-                    <a href="">JAVASCRIPT</a>
-                    <a href="">REACT</a>
-                    <a href="">Iu/Ux</a>
+                    <a href="" class="active" data-filter="all">TODOS</a>
+                    <a href="" data-filter="laravel">LARAVEL</a>
+                    <a href="" data-filter="javascript">JAVASCRIPT</a>
+                    <a href="" data-filter="react">REACT</a>
+                    <a href="" data-filter="iu-ux">Iu/Ux</a>
                 </div>
             </div>
             <section class="container-card">
                 <div class="card__container swiper">
                    <div class="card__content">
                       <div class="swiper-wrapper">
-                         <article class="card__article swiper-slide">
+
+                         <article class="card__article swiper-slide react">
                             <div class="card__image">
                                <img src="Assets/Img/Projetos/LandingPageCursoMarketing.jpg" alt="image" class="card__img">
                             </div>
@@ -185,13 +186,17 @@
                                   Este aplicativo foi desenvolvido para facilitar a vida dos usuários,
                                </p>
                                <div class="container-card-button">
-                                <a href="" class="card__button">LINK</a>
-                                <a href="" class="card__button" >GitHub</a>
+                                <a href="" class="card__button">
+                                    LINK
+                                </a>
+                                <a href="" class="card__button github">
+                                    GitHub
+                                </a>
                             </div>
                             </div>
                          </article>
-
-                         <article class="card__article swiper-slide">
+                         
+                         <!-- <article class="card__article swiper-slide react">
                             <div class="card__image">
                                <img src="Assets/Img/Projetos/LandingPageTechHub.jpg" alt="image" class="card__img">
                             </div>
@@ -201,13 +206,17 @@
                                   Este aplicativo foi desenvolvido para facilitar a vida dos usuários,
                                </p>
                                <div class="container-card-button">
-                                <a href="" class="card__button">LINK</a>
-                                <a href="" class="card__button" >GitHub</a>
+                                <a href="" class="card__button">
+                                    LINK
+                                </a>
+                                <a href="" class="card__button github">
+                                    GitHub
+                                </a>
                             </div>
                             </div>
                         </article>
 
-                        <article class="card__article swiper-slide">
+                        <article class="card__article swiper-slide laravel">
                            <div class="card__image">
                               <img src="Assets/Img/Projetos/MDados.png" alt="image" class="card__img">
                            </div>
@@ -217,14 +226,20 @@
                                  Este aplicativo foi desenvolvido para facilitar a vida dos usuários,
                               </p>
                               <div class="container-card-button">
-                               <a href="" class="card__button">LINK</a>
-                               <a href="" class="card__button" >GitHub</a>
-                               <a href="https://www.figma.com/file/GTbFGj6xgMlOiMitg6FoXe/Prot%C3%B3tipo-MDados?type=design&node-id=0-1&mode=design&t=2DdD2YIN6Cva7uWH-0" class="card__button figma" >FIGMA</a>
+                               <a href="" class="card__button">
+                                LINK
+                               </a>
+                               <a href="" class="card__button github" >
+                                GitHub
+                                </a>
+                               <a href="https://www.figma.com/file/GTbFGj6xgMlOiMitg6FoXe/Prot%C3%B3tipo-MDados?type=design&node-id=0-1&mode=design&t=2DdD2YIN6Cva7uWH-0" class="card__button figma" >
+                                FIGMA
+                                </a>
                            </div>
                            </div>
                         </article>
 
-                         <article class="card__article swiper-slide">
+                         <article class="card__article swiper-slide iu-ux">
                             <div class="card__image_video">
                                 <video src="Assets/Video/MiauDote.mp4" 
                                 class="card__video"
@@ -243,13 +258,17 @@
                                   Este aplicativo foi desenvolvido para facilitar a vida dos usuários,
                                </p>
                                <div class="container-card-button">
-                                   <a href="https://www.figma.com/proto/kJWhrrKyciScyssYWcloGv/MiauDote?type=design&node-id=17-8&t=XaJ525F8pfDWEwW8-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=17%3A8&show-proto-sidebar=1&mode=design" class="card__button">LINK</a>
-                                   <a href="https://www.figma.com/file/kJWhrrKyciScyssYWcloGv/MiauDote?type=design&node-id=102-2&mode=design&t=fnOKsktKDdYSQUMh-0" class="card__button figma" >FIGMA</a>
+                                   <a href="https://www.figma.com/proto/kJWhrrKyciScyssYWcloGv/MiauDote?type=design&node-id=17-8&t=XaJ525F8pfDWEwW8-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=17%3A8&show-proto-sidebar=1&mode=design" class="card__button">
+                                        LINK
+                                    </a>
+                                   <a href="https://www.figma.com/file/kJWhrrKyciScyssYWcloGv/MiauDote?type=design&node-id=102-2&mode=design&t=fnOKsktKDdYSQUMh-0" class="card__button figma" >
+                                        FIGMA
+                                    </a>
                                </div>
                             </div>
                          </article>
 
-                         <article class="card__article swiper-slide">
+                         <article class="card__article swiper-slide iu-ux">
                             <div class="card__image_video">
                                 <video src="Assets/Video/LocalService.mp4" 
                                 class="card__video"
@@ -268,12 +287,16 @@
                                   Este aplicativo foi desenvolvido para facilitar a vida dos usuários,
                                </p>
                                <div class="container-card-button">
-                                   <a href="https://www.figma.com/proto/Jk9lTdZ1ONcupfaSxRhP3B/LocalService?type=design&node-id=9-119&t=GUAIGbdIbRilzVuX-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A62&show-proto-sidebar=1" class="card__button">LINK</a>
-                                   <a href="https://www.figma.com/file/Jk9lTdZ1ONcupfaSxRhP3B/LocalService?type=design&node-id=210-11&mode=design&t=GUAIGbdIbRilzVuX-0" class="card__button figma" >FIGMA</a>
+                                   <a href="https://www.figma.com/proto/Jk9lTdZ1ONcupfaSxRhP3B/LocalService?type=design&node-id=9-119&t=GUAIGbdIbRilzVuX-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A62&show-proto-sidebar=1" class="card__button">
+                                        LINK
+                                   </a>
+                                   <a href="https://www.figma.com/file/Jk9lTdZ1ONcupfaSxRhP3B/LocalService?type=design&node-id=210-11&mode=design&t=GUAIGbdIbRilzVuX-0" class="card__button figma" >
+                                        FIGMA
+                                   </a>
                                </div>
                             </div>
-                         </article>
-                        </div>
+                         </article> -->
+
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -342,6 +365,7 @@
     <!--=============== CARROSEL JS ===============-->
     <script src="Assets/Js/Carrosel.js"></script>
     <script src="Assets/Js/ControllVideo.js"></script>
+    <script src="Assets/Js/AcaoFiltro.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@110.0.1/examples/js/loaders/GLTFLoader.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/loaders/GLTFLoader.js"></script>

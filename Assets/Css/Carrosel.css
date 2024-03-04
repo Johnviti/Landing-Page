@@ -29,7 +29,7 @@ img {
 }
 
 .card__article {
-  width: 300px; /* Remove after adding swiper js */
+  width: 300px; 
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -54,7 +54,7 @@ img {
 .card__img, .card__video {
   width: 400px;
   height: 700px;
-  min-width: 100%;
+  /* min-width: 100%; */
   object-fit: cover;
   object-position: top;
   position: relative;
@@ -167,6 +167,14 @@ img {
 }
 .figma:hover{
   background-color: #8A3BFF;
+  color: var(--cor-branco);
+}
+.github{
+  background-color: #000;
+  color: var(--cor-branco);
+}
+.github:hover{
+  background-color: #141414;
   color: var(--cor-branco);
 }
 
