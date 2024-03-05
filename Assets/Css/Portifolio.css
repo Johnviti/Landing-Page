@@ -370,8 +370,8 @@ canvas {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--cor-branco);
-    color: var(--cor-branco);
+    border: 2px solid var(--cor-laranja);
+    color: var(--cor-laranja);
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -384,10 +384,7 @@ canvas {
 .active:hover{
     animation: bounce 4s infinite;
 }
-.dark{
-    color: var(--cor-preto) !important;
-    border: 2px solid var(--cor-preto) !important;
-}
+
 
 @keyframes bounce {
     0%{
