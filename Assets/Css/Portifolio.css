@@ -359,6 +359,48 @@ canvas {
     font-weight: 500;
     margin: 10px 0;
 }
+.scroll-top{
+    position: relative;
+}
+.scroll-top i{
+    display: none;
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-branco);
+    color: var(--cor-branco);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active{
+    display: flex !important;
+}
+
+.active:hover{
+    animation: bounce 4s infinite;
+}
+.dark{
+    color: var(--cor-preto) !important;
+    border: 2px solid var(--cor-preto) !important;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 1360px) {

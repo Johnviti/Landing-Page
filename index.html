@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="John Victor">
     <title>John Victor</title>
     <link type="text/css" rel="stylesheet" href="Assets/Css/3d.css">
     <link rel="stylesheet" href="Assets/Css/BorderImage.css">
@@ -30,10 +31,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <!-- Inclua a biblioteca three.js via CDN -->
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@110.0.1/build/three.module.js"></script> -->
-    <!-- Inclua o GLTFLoader via CDN -->
 </head>
 <body>
     <div id="carregamento" class="background-spinner">
@@ -43,8 +40,13 @@
             Carregando...
         </button>
     </div>
-    <div class="home">
-        <div class="nav-bar-portifolio" id="navbar">
+    <div class="scroll-top">
+        <div class="container-scroll" onclick="backToSection()">
+            <i class="ri-arrow-up-s-line icon"></i>
+        </div>
+    </div>
+    <section class="home">
+        <header class="nav-bar-portifolio" id="navbar">
             <div class="logo">
                 <img src="Assets/Img/j.png" alt="Logo-John-Victor">
                 <a href=""><span>John Victor</span></a>
@@ -55,7 +57,7 @@
                 <li class="item-nav"><a href="#projetos">Projetos</a></li>
                 <li class="item-nav-btn"><a href="Assets/docs/JOHN VICTOR DOS SANTOS AMORIM.pdf" class="btn-padrao" download>Contrate-me</a></li>
             </ul>
-        </div>
+        </header>
         <div id="container3D"></div>
         <div class="container-home">
             <div class="home-principal">
@@ -71,7 +73,7 @@
                 <p>John Victor</p>
             </div>
         </div>
-    </div>
+    </section>
     <aside class="barra-preta">
         <div class="container-redes-sociais">
             <a href="https://www.linkedin.com/in/john-victor-648480225/">
@@ -108,7 +110,7 @@
             </a>
         </div>   
     </aside>
-    <div class="container-profissao">
+    <section class="container-profissao">
             <div class="imagem-profissao">
                 <img src="Assets/Img/pic.png" alt="Programador">
             </div>
@@ -121,11 +123,11 @@
                     Minha abordagem é fundamentada nos princípios SOLID, garantindo um código robusto e de fácil manutenção.
                 </p>
             </div>
-    </div>
+    </section>
     <div class="arrow-profissao">
         <img src="Assets/Img/arrow-seta.svg" alt="">
     </div>
-    <div class="about-me" id="sobre">
+    <section class="about-me" id="sobre">
         <div class="container-imagem">
             <div class="conteudo-imagem">
                 <img src="Assets/Img/Home-John.png" alt="">
@@ -157,8 +159,8 @@
                 </div>
             </div>
         </div> 
-    </div>
-    <div class="container-projetos" id="projetos">
+    </section>
+    <section class="container-projetos" id="projetos">
         <div class="my-project">
             <div class="header-project">
                 <h1>Meu projetos</h1>
@@ -322,11 +324,12 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-             </section>
+            </section>
         </div>
+    </section>
         <div>
         <div class="linha"></div>
-        <div class="container-contato" id="container-contato">
+        <section class="container-contato" id="container-contato">
             <div class="form-contato">
                 <div class="login-box">
                     <h2>ENTRE EM CONTATO</h2>
@@ -351,7 +354,7 @@
                         Enviar
                       </button>
                     </form>
-                  </div>
+                </div>
             </div>
             <div class="contact">
                 <h1>Contatos</h1>
@@ -365,9 +368,9 @@
                     </div> 
                 </div>
             </div>            
-        </div>
+        </section>
     </div>
-    <div class="container-rodape">
+    <footer class="container-rodape">
         <div class="social-rodape">
             <ul>
                 <li><a href="" class="btn-social-rodape"><img src="Assets/Img/github.svg" alt="Github"></a></li>
@@ -379,13 +382,14 @@
             <img src="Assets/Img/j.png" alt="Logo-John-Victor">
             <a href=""><span>John Victor</span></a>
         </div>
-    </div>
+    </footer>
     <!--=============== SWIPER JS ===============-->
     <script src="Assets/Js/swiper-bundle.min.js"></script>
     <!--=============== CARROSEL JS ===============-->
     <script src="Assets/Js/Carrosel.js"></script>
     <script src="Assets/Js/ControllVideo.js"></script>
     <script src="Assets/Js/AcaoFiltro.js"></script>
+    <script src="Assets/Js/AcaoScroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@110.0.1/examples/js/loaders/GLTFLoader.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/loaders/GLTFLoader.js"></script>
