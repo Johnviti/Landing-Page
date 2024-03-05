@@ -39,7 +39,8 @@ const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "World" ? 
 scene.add(ambientLight);
 
 controls = new OrbitControls(camera, renderer.domElement);
-controls.enableZoom = false; 
+controls.enableZoom = true;
+
 
 const loader = new GLTFLoader();
 loader.load(

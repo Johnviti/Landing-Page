@@ -291,7 +291,7 @@ body::-webkit-scrollbar-thumb:hover {
     position: absolute;
 }
 
-#container3D canvas {
+canvas {
     width: 1050px !important;
     height: 500px !important;
     top: 50%;
