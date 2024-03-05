@@ -284,14 +284,28 @@ body::-webkit-scrollbar-thumb:hover {
 .carregamento{
     background-color: var(--cor-branco);
 }
-#container3D canvas {
-    width: 100vw !important;
-    height: 100vh !important;
+
+#container3D{
+    top: 58%;
+    right: 30%;
     position: absolute;
-    top: 0;
-    left: 0;
+}
+
+#container3D canvas {
+    width: 1050px !important;
+    height: 500px !important;
+    top: 50%;
+    right: 10px;
+    position: absolute;
     z-index: 1;
 }
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .btn-contato{
     width: 206px;
     height: 50px;

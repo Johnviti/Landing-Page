@@ -23,31 +23,8 @@ let object;
 let controls;
 let objToRender = 'World';
 
-const loader = new GLTFLoader();
-
-// Carregue o arquivo
-loader.load(
-    `scene.gltf`,
-    function (gltf) {
-        object = gltf.scene;
-        scene.add(object);
-        Spinner.style.display = "none";
-        titulo.classList.add("digitando");
-        subttitulo.classList.add("efeito-direita");
-    },
-    function (xhr) {
-        console.log((xhr.loaded / xhr.total * 100) + '% carregado');
-    },
-    function (error) {
-        Spinner.style.display = "none";
-        titulo.classList.add("digitando");
-        subttitulo.classList.add("efeito-direita");
-        console.error(error);
-    }
-);
-
 const renderer = new THREE.WebGLRenderer({ alpha: true }); 
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(850, 500);
 
 document.getElementById("container3D").appendChild(renderer.domElement);
 
@@ -58,34 +35,43 @@ topLight.position.set(500, 500, 500)
 topLight.castShadow = true;
 scene.add(topLight);
 
-const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "World" ? 5 : 1);
+const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "World" ? 6 : 1);
 scene.add(ambientLight);
 
+controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false; 
 
-if (objToRender === "World") {
-    if (window.innerWidth < 760) {
-        controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableZoom = false; 
+const loader = new GLTFLoader();
+loader.load(
+    `scene.glb`,
+    function (gltf) {
+        object = gltf.scene;
+        scene.add(object);
+        object.scale.set(1.55, 1.55, 1.55);
+        object.position.y = -0.8;
+        Spinner.style.display = "none";
+        titulo.classList.add("digitando");
+    },
+    function (xhr) {
+        console.log((xhr.loaded / xhr.total * 100) + '% carregado');
+    },
+    function (error) {
+        Spinner.style.display = "none";
+        titulo.classList.add("digitando");
+        console.error(error);
     }
-}
+);
 
-// Renderize a cena
 function animate() {
     requestAnimationFrame(animate);
     object.rotation.y += 0.001;
-    object.position.y = -1;
-    if (window.innerWidth > 760) {
-        object.position.x = 0.8;
-        object.position.y = -0.6;
-    }
     renderer.render(scene, camera);
+    controls.update(); 
 }
 
 window.addEventListener("resize", function () {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = 1;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
 
 animate();
