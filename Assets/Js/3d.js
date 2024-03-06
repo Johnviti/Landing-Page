@@ -23,7 +23,7 @@ let object;
 let controls;
 let objToRender = 'World';
 
-const renderer = new THREE.WebGLRenderer({ alpha: true }); 
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); 
 renderer.setSize(850, 500);
 
 document.getElementById("container3D").appendChild(renderer.domElement);
