@@ -387,6 +387,13 @@ canvas {
     animation: bounce 4s infinite;
 }
 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px !important;
+    left: 50px !important;
+    right: auto !important;
+}
+
 
 @keyframes bounce {
     0%{
@@ -399,6 +406,7 @@ canvas {
         transform: translateY(-15px);
     }
 }
+
 
 
 /* RESPONSIVIDADE */
