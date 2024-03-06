@@ -6,9 +6,10 @@ const scene = new THREE.Scene();
 let camera;
 
 if (window.innerWidth < 760) {
-    camera = new THREE.PerspectiveCamera(12, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(12, 700 / 700, 0.1, 1000);
 } else {
-    camera = new THREE.PerspectiveCamera(8, window.innerWidth / window.innerHeight, 0.1, 1000);
+    // camera = new THREE.PerspectiveCamera(8, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(12, 700 / 700, 0.1, 1000);
 }
 
 const Spinner = document.getElementById("carregamento");
@@ -24,7 +25,7 @@ let controls;
 let objToRender = 'World';
 
 const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); 
-renderer.setSize(850, 500);
+renderer.setSize(500, 500);
 
 document.getElementById("container3D").appendChild(renderer.domElement);
 
@@ -48,7 +49,7 @@ loader.load(
     function (gltf) {
         object = gltf.scene;
         scene.add(object);
-        object.scale.set(1.55, 1.55, 1.55);
+        object.scale.set(1.8, 1.8, 1.8);
         object.position.y = -0.8;
         Spinner.style.display = "none";
         titulo.classList.add("digitando");

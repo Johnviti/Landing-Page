@@ -293,10 +293,9 @@ body::-webkit-scrollbar-thumb:hover {
     right: 30%;
     position: absolute;
 }
-
 canvas {
-    width: 1050px !important;
-    height: 500px !important;
+    width: 700px !important;
+    height: 700px !important;
     top: 50%;
     right: 10px;
     position: absolute;
@@ -308,7 +307,6 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .btn-contato{
     width: 206px;
     height: 50px;
