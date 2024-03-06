@@ -99,16 +99,22 @@ img {
 
 .card__description {
   font-weight: 500;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
   margin-bottom: 1.75rem;
 }
 
 .card__button {
   width: 48%;
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--cor-laranja);
   padding: .75rem .5rem;
   border-radius: .25rem;
-  color: var(--dark-color);
+  color: var(--cor-branco);
   font-weight: 600;
   text-decoration: none !important;
 }

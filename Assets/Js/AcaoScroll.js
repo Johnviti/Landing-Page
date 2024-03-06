@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function(){
     var scroll = document.querySelector('.arrow-top');
-    scroll.classList.toggle("active", window.scrollY > 300)
+    scroll.classList.toggle("active-scroll", window.scrollY > 300)
 });
 
 function backToSection(){

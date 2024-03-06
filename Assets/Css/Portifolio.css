@@ -380,11 +380,11 @@ canvas {
     cursor: pointer;
 }
 
-.active{
+.active-scroll{
     display: flex !important;
 }
 
-.active:hover{
+.active-scroll:hover{
     animation: bounce 4s infinite;
 }
 
