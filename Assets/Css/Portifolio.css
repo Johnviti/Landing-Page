@@ -193,7 +193,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .container-projetos{
-    background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%);
+    /* background: linear-gradient(113deg, #2B2998 -30.3%, #010520 58.12%); */
 }
 
 .linha::after{

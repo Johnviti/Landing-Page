@@ -39,6 +39,10 @@
     gap: 40px;
     padding-right: 80px;
 }
+.menu li{
+    display: flex;
+    align-items: center;
+}
 .item-nav a{
     color: #FFF;
     font-family: Poppins;
