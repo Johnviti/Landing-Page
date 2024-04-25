@@ -1,5 +1,5 @@
 
-# Portifólio
+# Portfólio
 
 ## 🛠 Habilidades
 Javascript, HTML, CSS
