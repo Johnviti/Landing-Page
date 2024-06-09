@@ -92,7 +92,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.63px;
-    width: 1000px;
+    width: 800px;
     text-align: justify;
 }
 
@@ -148,4 +148,61 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 50;
+}
+
+
+@media screen and (max-width: 1024px){
+    .about-me{
+        padding: 150px 0;
+    }
+    .my-photo{
+        width: 30vw;
+        height: 30vw;
+    }
+    .about-me-titulo h1{
+        font-size: 50px;
+    }
+    .about-me-titulo p{
+        font-size: 18px;
+    }
+    .info-skill p{
+        font-size: 20px;
+    }
+    .skill-bar .bar{
+        height: 10px;
+    }
+    .skill-bar .bar::after{
+        width: 12px;
+        height: 12px;
+        left: calc(var(--wth) - 3%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about-me{
+        flex-direction: column;
+        padding: 100px 0;
+    }
+    .my-photo{
+        width: 40vw;
+        height: 40vw;
+    }
+    .about-me-titulo h1{
+        font-size: 40px;
+    }
+    .about-me-titulo p{
+        font-size: 18px;
+    }
+    .info-skill p{
+        font-size: 20px;
+    }
+    .skill-bar .bar{
+        height: 10px;
+    }
+    .skill-bar .bar::after{
+        width: 12px;
+        height: 12px;
+        left: calc(var(--wth) - 3%);
+    }
+    
 }

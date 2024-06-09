@@ -1,7 +1,7 @@
 .home-principal h1 {
     color: #FFF;
     font-family: Quantico;
-    font-size: 58px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -13,7 +13,7 @@
 .subtitulo-web{
     color: var(--second-color);
     font-family: Quantico;
-    font-size: 58px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

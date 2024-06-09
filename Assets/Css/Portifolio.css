@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb:hover {
     min-height: 100vh;
     height: 100%;
     width: 70vw;
-    padding-left: 200px;
+    padding-left: 100px;
     /* margin: 0 auto; */
     gap: 150px;
     padding-top: 268px;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
 .side{
     position: absolute;
     top: 50%;
-    right: -5%;
+    right: -10%;
     transform: translateY(-50%);
 }
 
@@ -415,6 +415,7 @@ canvas {
         flex-direction: column;
         gap: 50px;
         padding-top: 160px;
+        padding-left: 50px;
     }
     .btn-contato{
         width: 180px;
