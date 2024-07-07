@@ -109,7 +109,7 @@ img {
 }
 
 .card__button {
-  width: 48%;
+  width: 100%;
   display: inline-block;
   background-color: var(--cor-laranja);
   padding: .75rem .5rem;
