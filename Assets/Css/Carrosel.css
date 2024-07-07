@@ -24,13 +24,13 @@ img {
 
 .card__content {
   margin-inline: 1.75rem;
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;  
   overflow: hidden;
 }
 
 .card__article {
   width: 20vw !important; 
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
