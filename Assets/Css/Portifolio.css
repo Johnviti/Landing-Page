@@ -482,6 +482,7 @@ canvas {
     .background-spinner-mobile h1{
         font-size: 20px;
         text-align: center;
+        color: white;
     }  
 
     .background-spinner h1{
