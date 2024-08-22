@@ -237,6 +237,19 @@ body::-webkit-scrollbar-thumb:hover {
     margin-bottom: 20px;
 }
 
+.background-spinner-mobile{
+    background-color: #010520;
+     display: none;
+    gap: 20px;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.4s ease 0s;
+}
 
 .background-spinner{
     background-color: #010520;
@@ -262,7 +275,6 @@ body::-webkit-scrollbar-thumb:hover {
     font-weight: 400;
     letter-spacing: 0.3px;
     margin-bottom: 20px;
-
 }
 .btn-carregamento{
     height: 50px;
@@ -461,6 +473,17 @@ canvas {
         height: 40px;
         font-size: 18px;
     }
+    .background-spinner-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .background-spinner-mobile h1{
+        font-size: 20px;
+        text-align: center;
+    }  
+
     .background-spinner h1{
         font-size: 24px;
         text-align: center;
