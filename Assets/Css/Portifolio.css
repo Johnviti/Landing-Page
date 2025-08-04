@@ -86,6 +86,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .btn-padrao{
     width: 210px;
+    font-family: Poppins;
     height: 43px;
     text-align: center;
     border-radius: 8px;
@@ -110,6 +111,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-decoration: none;
     font-weight: 501;
     cursor: pointer;
+    font-family: Poppins;
 }
 .container-redes-sociais{
     background-color: #010520;
@@ -237,7 +239,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-bottom: 20px;
 }
 
-.background-spinner-mobile{
+/* .background-spinner-mobile{
     background-color: #010520;
      display: none;
     gap: 20px;
@@ -249,7 +251,7 @@ body::-webkit-scrollbar-thumb:hover {
     left: 0;
     z-index: 9999;
     transition: all 0.4s ease 0s;
-}
+} */
 
 .background-spinner{
     background-color: #010520;

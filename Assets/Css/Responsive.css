@@ -1,0 +1,668 @@
+/* ===== RESPONSIVIDADE GERAL ===== */
+
+/* Configurações base para responsividade */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* ===== BREAKPOINTS ===== */
+/* Mobile First Approach */
+
+/* Extra Small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    html {
+        font-size: 14px;
+    }
+    
+    /* Navbar responsiva */
+    .nav-bar-portifolio {
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .logo a span {
+        font-size: 16px;
+    }
+    
+    .logo img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    /* Home section */
+    .container-home {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 150px;
+        width: 100vw;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .home-principal {
+        align-items: center;
+    }
+    
+    .titulo {
+        font-size: 24px !important;
+        text-align: center;
+    }
+    
+    .titulo span {
+        font-size: 20px !important;
+    }
+    
+    .subtitulo-web {
+        font-size: 16px !important;
+    }
+    
+    .btn-contato {
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .info-3d {
+        display: none;
+    }
+    
+    .side {
+        display: none;
+    }
+    
+    /* About Me section */
+    .about-me {
+        flex-direction: column;
+        padding: 80px 20px;
+        gap: 30px;
+    }
+    
+    .container-imagem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .my-photo {
+        width: 60vw;
+        height: 60vw;
+        max-width: 250px;
+        max-height: 250px;
+    }
+    
+    .about-me-titulo {
+        text-align: center;
+    }
+    
+    .about-me-titulo h1 {
+        font-size: 32px;
+    }
+    
+    .about-me-titulo p {
+        font-size: 16px;
+        width: 100%;
+        text-align: justify;
+    }
+    
+    .info-skill p {
+        font-size: 18px;
+    }
+    
+    .skill-bar .bar {
+        height: 8px;
+    }
+    
+    .skill-bar .bar::after {
+        width: 10px;
+        height: 10px;
+        left: calc(var(--wth) - 4%);
+    }
+    
+    /* Profissão section */
+    .container-profissao {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    
+    .imagem-profissao img {
+        width: 80vw;
+        max-width: 300px;
+    }
+    
+    .texto-profissao {
+        text-align: center;
+    }
+    
+    .texto-profissao h1 {
+        font-size: 28px !important;
+        word-break: normal;
+        max-width: 100%;
+    }
+    
+    .texto-profissao h2 {
+        font-size: 20px !important;
+        word-break: normal;
+        max-width: 100%;
+    }
+    
+    .texto-profissao p {
+        font-size: 16px !important;
+        max-width: 100%;
+    }
+    
+    /* Redes sociais */
+    .container-redes-sociais {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+    
+    .container-redes-sociais svg {
+        width: 120px;
+        height: auto;
+    }
+    
+    /* 3D Container */
+    #container3D {
+        display: none !important;
+    }
+    
+    /* Background spinner mobile */
+    .background-spinner-mobile {
+        display: none !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .nav-bar-portifolio {
+        padding: 20px 15px;
+    }
+    
+    .logo {
+        padding-left: 10px;
+    }
+    
+    .logo a span {
+        font-size: 18px;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .container-home {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 180px;
+        width: 100vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .titulo {
+        font-size: 28px !important;
+    }
+    
+    .titulo span {
+        font-size: 24px !important;
+    }
+    
+    .about-me {
+        flex-direction: column;
+        padding: 100px 30px;
+        gap: 40px;
+    }
+    
+    .my-photo {
+        width: 50vw;
+        height: 50vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .about-me-titulo h1 {
+        font-size: 40px;
+    }
+    
+    .about-me-titulo p {
+        font-size: 18px;
+        width: 100%;
+    }
+    
+    .container-profissao {
+        flex-direction: column;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+    
+    .imagem-profissao img {
+        width: 70vw;
+        max-width: 400px;
+    }
+    
+    .texto-profissao h1 {
+        font-size: 36px !important;
+    }
+    
+    .texto-profissao h2 {
+        font-size: 24px !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .nav-bar-portifolio {
+        padding: 25px 30px;
+    }
+    
+    .logo {
+        padding-left: 20px;
+    }
+    
+    .menu {
+        padding-right: 30px;
+        gap: 30px;
+    }
+    
+    .item-nav a {
+        font-size: 18px;
+    }
+    
+    .container-home {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 200px;
+        width: 90vw;
+        gap: 80px;
+    }
+    
+    .titulo {
+        font-size: 36px !important;
+    }
+    
+    .titulo span {
+        font-size: 32px !important;
+    }
+    
+    .about-me {
+        flex-direction: column;
+        padding: 120px 50px;
+        gap: 50px;
+    }
+    
+    .my-photo {
+        width: 40vw;
+        height: 40vw;
+        max-width: 350px;
+        max-height: 350px;
+    }
+    
+    .about-me-titulo h1 {
+        font-size: 50px;
+    }
+    
+    .about-me-titulo p {
+        font-size: 19px;
+        width: 100%;
+    }
+    
+    .container-profissao {
+        padding: 80px 50px;
+        gap: 60px;
+    }
+    
+    .imagem-profissao img {
+        width: 45vw;
+    }
+    
+    .texto-profissao h1 {
+        font-size: 45px !important;
+    }
+    
+    .texto-profissao h2 {
+        font-size: 30px !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .nav-bar-portifolio {
+        padding: 25px 40px;
+    }
+    
+    .logo {
+        padding-left: 40px;
+    }
+    
+    .menu {
+        padding-right: 40px;
+    }
+    
+    .container-home {
+        padding-left: 70px;
+        width: 80vw;
+        gap: 100px;
+    }
+    
+    .about-me {
+        padding: 150px 70px;
+    }
+    
+    .my-photo {
+        width: 35vw;
+        height: 35vw;
+    }
+    
+    .about-me-titulo p {
+        width: 90%;
+    }
+    
+    .container-profissao {
+        gap: 70px;
+    }
+    
+    .imagem-profissao img {
+        width: 42vw;
+    }
+}
+
+
+/* ===== UTILITÁRIOS RESPONSIVOS ===== */
+
+/* Ocultar elementos em dispositivos móveis */
+@media (max-width: 767.98px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Ocultar elementos em desktop */
+@media (min-width: 768px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Mostrar apenas em mobile */
+@media (max-width: 767.98px) {
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-mobile {
+        display: none !important;
+    }
+}
+
+/* ===== MENU HAMBURGER ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-branco);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 767.98px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ===== AJUSTES PARA FORMULÁRIOS ===== */
+@media (max-width: 767.98px) {
+    .form-container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-control {
+        font-size: 16px; /* Evita zoom no iOS */
+        padding: 12px;
+    }
+    
+    .btn-form {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* ===== AJUSTES PARA CARROSSEL ===== */
+@media (max-width: 767.98px) {
+    .swiper-container {
+        padding: 20px 0;
+    }
+    
+    .swiper-slide {
+        padding: 10px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    
+    .swiper-pagination {
+        bottom: 10px;
+    }
+}
+
+/* ===== AJUSTES PARA PROJETOS ===== */
+@media (max-width: 767.98px) {
+    .projeto-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .projeto-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .projeto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .projeto-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+/* ===== AJUSTES PARA RODAPÉ ===== */
+@media (max-width: 767.98px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ===== SCROLL SUAVE ===== */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ===== AJUSTES PARA ACESSIBILIDADE ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== AJUSTES PARA IMPRESSÃO ===== */
+@media print {
+    .nav-bar-portifolio,
+    .container-redes-sociais,
+    .btn-padrao,
+    .btn-contato,
+    #container3D {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .about-me,
+    .container-profissao {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* ===== ORIENTAÇÃO LANDSCAPE PARA MOBILE ===== */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .container-home {
+        padding-top: 120px;
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+    .home-principal {
+        align-items: flex-start;
+    }
+    
+    .titulo {
+        font-size: 20px !important;
+    }
+    
+    .titulo span {
+        font-size: 18px !important;
+    }
+    
+    .about-me {
+        flex-direction: row;
+        padding: 60px 20px;
+    }
+    
+    .my-photo {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+/* ===== AJUSTES PARA TELAS DE ALTA DENSIDADE ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ===== CONTAINER FLUIDO ===== */
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-fluid {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-fluid {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-fluid {
+        max-width: 1320px;
+    }
+}
