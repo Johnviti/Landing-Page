@@ -1,329 +1,208 @@
-.about-me {
+.about-me{
     background-color: var(--cor-branco);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 50px;
-    padding: 150px 0;
-    position: relative;
-    overflow: hidden;
+    padding: 200px 0;
+    /* margin-top: 200px; */
 }
 
-.about-me::before {
-    content: '';
+.my-photo{
+    width: 25vw;
+    height: 25vw;
+    background-image: url('../Img/JohnVictor.png');
+    background-size: cover;
+    /* width: 30vw; */
+    object-fit: cover;
+    border-radius: 100%;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.my-photo:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.my-photo::before{
+    content: ' ';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.9) 100%);
-    z-index: 0;
-}
-
-.container-imagem {
-    position: relative;
+    background: inherit;
+    border-radius: 100%;
+    background-size: cover;
+    filter: blur(25px);
+    opacity: 0;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.5s ease;
 }
 
-.container-imagem:hover {
-    transform: translateY(-10px);
+.my-photo:hover::before{
+    opacity: 1;
+}
+    /* background-color: var(--cor-branco); */
+    /* filter: opacity(0.1); */
+
+
+.my-photo:hover{
+    scale: 1.2;
+    transition: .5s;
 }
 
-.conteudo-imagem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-}
-
-.conteudo-imagem img {
-    width: 280px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
-    object-fit: cover;
-}
-
-.conteudo-imagem img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.conteudo-imagem h2 {
-    color: var(--cor-preto);
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.conteudo-imagem h2 span {
-    color: var(--cor-laranja);
-    font-size: 18px;
-    font-weight: 500;
-    display: block;
-    margin-top: 5px;
-}
-
-.btn-padrao {
-    background: linear-gradient(to right, var(--cor-laranja), var(--first-color));
-    color: var(--cor-branco);
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
-}
-
-.btn-padrao:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 122, 0, 0.4);
-}
-
-.about-me-titulo {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 800px;
-}
-
-.about-me-titulo h1 {
-    color: var(--cor-preto);
-    font-family: Poppins, sans-serif;
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-}
-
-.about-me-titulo h1::after {
-    content: '';
+.my-photo::before{
+    content: ' ';
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: var(--cor-laranja);
-    border-radius: 2px;
-}
-
-.about-me-titulo p {
-    color: var(--cor-preto);
-    font-family: Poppins, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-    text-align: justify;
-    max-width: 100%;
-}
-
-.about-me-skill {
-    margin-top: 15px;
-}
-
-.skill-bar {
-    display: grid;
-    gap: 25px;
     width: 100%;
+    height: 100%;
+    background: inherit;
+    border: 100%;
+    background-size: cover;
+    filter: blur(25px);
+    opacity: 0;
+    z-index: 1;
+}
+.my-photo:hover::before{
+    opacity: 1;
+    transition: .2s;
 }
 
-.info-skill {
+
+/* criação da barra softskills */
+.about-me-titulo{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
-
-.info-skill p {
+.about-me-titulo h1{
     color: var(--cor-preto);
-    font-family: Poppins, sans-serif;
-    font-size: 20px;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
     font-weight: 600;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
+    line-height: normal;
+    letter-spacing: 1.95px;
+}
+.about-me-titulo p{
+    color: var(--cor-preto);
+    font-family: Poppins;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.63px;
+    width: 800px;
+    text-align: justify;
 }
 
-.info-skill p::after {
-    content: attr(data-value);
-    color: var(--cor-laranja);
-    font-weight: 500;
+.info-skill p{
+    color: var(--cor-preto);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
 }
-
-.skill-bar .bar {
+.skill-bar{
+    gap: 20px;
+    display: grid; 
+}
+.info-skill p{
+    margin-bottom: 10px;
+}
+.skill-bar .bar{
     position: relative;
     width: 100%;
-    height: 10px;
-    background-color: rgba(153, 153, 153, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.5s ease;
+    height: 12px;
+    background-color: var(--cor-cinza);
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: all .3s ease;
+    /* border-radius: 9999px; */
+    /* overflow: hidden; */
+    /* margin: 5px 0; */
 }
 
-.skill-bar .bar::before {
-    content: '';
+.skill-bar .bar::before{
+    content: ' ';
     position: absolute;
     width: var(--wth);
+    border-radius: 6px;
     height: 100%;
-    background: linear-gradient(to right, var(--cor-laranja), var(--first-color));
-    border-radius: 10px;
-    transition: width 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation: skillAnimation 1.5s forwards;
+    background: #FD6F00;
 }
 
-.skill-bar .bar::after {
-    content: '';
+.skill-bar .bar::after{
+    content: ' ';
     position: absolute;
-    width: 14px;
-    height: 14px;
-    background-color: var(--cor-branco);
-    border-radius: 50%;
-    left: calc(var(--wth) - 7px);
+    width: 16px; 
+    height: 16px;
+    background-color: var(--cor-branco); 
+    border-radius: 50%; 
+    left: calc(var(--wth) - 2%);
+    border: 3px solid #FD6F00;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 0 10px rgba(255, 122, 0, 0.5);
-    transition: all 0.5s ease;
+    z-index: 50;
 }
 
-@keyframes skillAnimation {
-    0% { width: 0; }
-    100% { width: var(--wth); }
-}
 
-/* Media Queries */
-@media screen and (max-width: 1200px) {
-    .about-me {
-        padding: 120px 30px;
-        gap: 40px;
+@media screen and (max-width: 1024px){
+    .about-me{
+        padding: 150px 0;
     }
-    
-    .about-me-titulo h1 {
-        font-size: 45px;
+    .my-photo{
+        width: 30vw;
+        height: 30vw;
     }
-    
-    .about-me-titulo p {
-        font-size: 17px;
+    .about-me-titulo h1{
+        font-size: 50px;
     }
-}
-
-@media screen and (max-width: 992px) {
-    .about-me {
-        padding: 100px 25px;
-        gap: 35px;
-    }
-    
-    .conteudo-imagem img {
-        width: 240px;
-    }
-    
-    .about-me-titulo h1 {
-        font-size: 40px;
-    }
-    
-    .about-me-titulo p {
-        font-size: 16px;
-    }
-    
-    .info-skill p {
+    .about-me-titulo p{
         font-size: 18px;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .about-me {
-        flex-direction: column;
-        padding: 80px 20px;
-        gap: 40px;
+    .info-skill p{
+        font-size: 20px;
     }
-    
-    .container-imagem {
-        width: 100%;
+    .skill-bar .bar{
+        height: 10px;
     }
-    
-    .conteudo-imagem img {
-        width: 220px;
-    }
-    
-    .about-me-titulo {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .about-me-titulo h1 {
-        font-size: 36px;
-    }
-    
-    .about-me-titulo h1::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .about-me-titulo p {
-        text-align: center;
-        font-size: 16px;
-    }
-    
-    .info-skill {
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .about-me {
-        padding: 60px 15px;
-        gap: 30px;
-    }
-    
-    .conteudo-imagem img {
-        width: 180px;
-    }
-    
-    .conteudo-imagem h2 {
-        font-size: 24px;
-    }
-    
-    .conteudo-imagem h2 span {
-        font-size: 16px;
-    }
-    
-    .about-me-titulo h1 {
-        font-size: 30px;
-    }
-    
-    .about-me-titulo p {
-        font-size: 15px;
-    }
-    
-    .info-skill p {
-        font-size: 16px;
-    }
-    
-    .skill-bar .bar {
-        height: 8px;
-    }
-    
-    .skill-bar .bar::after {
+    .skill-bar .bar::after{
         width: 12px;
         height: 12px;
-        left: calc(var(--wth) - 6px);
+        left: calc(var(--wth) - 3%);
     }
+}
+
+@media screen and (max-width: 768px){
+    .about-me{
+        flex-direction: column;
+        padding: 100px 0;
+    }
+    .my-photo{
+        width: 40vw;
+        height: 40vw;
+    }
+    .about-me-titulo h1{
+        font-size: 40px;
+    }
+    .about-me-titulo p{
+        font-size: 18px;
+    }
+    .info-skill p{
+        font-size: 20px;
+    }
+    .skill-bar .bar{
+        height: 10px;
+    }
+    .skill-bar .bar::after{
+        width: 12px;
+        height: 12px;
+        left: calc(var(--wth) - 3%);
+    }
+    
 }
